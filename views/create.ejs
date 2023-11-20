@@ -1,0 +1,123 @@
+<html>
+    <title>Create New Item</title>
+    <style>
+	body {
+	    background-color: #404040;
+	    background-size: cover;
+	    font-family: Tahoma, Sans-serif;
+	    text-align: center;
+	}
+
+	.block {
+	    position: absolute;
+	    top: 9%;
+	    left: 20%;
+	    bottom: 20%;
+	    right: 20%;
+	    margin-top: -50px;
+	    margin-left: -100px;
+	    margin-bottom: -50px;
+	    margin-right: -100px;
+	    max-width: 1500px; //(max of your screen/big screen)
+	    max-height: 1500px;
+            width: 40%;
+            height: 79%;
+            overflow: scroll;
+	    padding: 20px;
+	    background: #fff;
+	    border-radius: 5px;
+	    border-top: 5px solid #ff656c;
+	    margin: 0 auto;
+	}
+
+	.block h1 {
+	    text-align: center;
+	    color: #000;
+	    font-size: 18px;
+	    text-transform: uppercase;
+	    margin-top: 0;
+	    margin-bottom: 20px;
+	}
+
+	.block input {
+	    width: 100%;
+	    height: 42px;
+	    box-sizing: border-box;
+	    border-radius: 5px;
+	    border: 1px solid #ccc;
+	    margin-bottom: 20px;
+	    font-size: 14px;
+	    font-family: Montserrat;
+	    padding: 0 20px 0 50px;
+	    outline: none;
+	}
+
+	.block input#username {
+	    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+	    background-size: 16px 80px;
+	}
+
+	.block input#username:focus {
+	    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+	    background-size: 16px 80px;
+	}
+
+	.block input#password {
+	    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+	    background-size: 16px 80px;
+	}
+
+	.block input#password:focus {
+	    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+	    background-size: 16px 80px;
+	}
+
+	.block input:active, .block input:focus {
+	    border: 1px solid #ff656c;
+	}
+
+	.block button {
+	    width: 100%;
+	    height: 40px;
+	    background: #ff656c;
+	    box-sizing: border-box;
+	    border-radius: 5px;
+	    border: 1px solid #e15960;
+	    color: #fff;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    font-size: 14px;
+	    font-family: Montserrat;
+	    outline: none;
+	    cursor: pointer;
+	}
+
+	.block button:hover {
+	    background: #ff7b81;
+	}
+    </style>
+<body>
+<div class="block">
+    <div class="jumbotron text-center">
+            <h1>Create New Hardware Information</h1>
+    </div>
+    <form action="/create" method="POST">
+        <label for='product_id'><b>Product ID:</b></label><br>
+          <input type="text" id="product_id" name="product_id" placeholder="" pattern="[0-9]{8}" required><br><br>
+        <label for='category'><b>Category:</b></label><br>
+          <input type="text" id="category" name="category" placeholder="" required><br><br>
+        <label for='hardware_name'><b>Hardware Name:</b></label><br>
+            <input type="text" id="hardware_name" name="hardware_name" placeholder="" required><br><br>
+        <label for='release_year'><b>Release Year:</b></label><br>
+            <input type="text" id="release_year" name="release_year" placeholder="" pattern="[0-9]{4}" required><br><br>
+        <label for='price'><b>Price:</b></label><br>
+            <input type="text" id="price" name="price" placeholder="" pattern="[0-9]+" required><br>
+        </p>
+        <button type="submit">Create</button> 
+    </form>   
+    <form action="/menu">
+        <button type="submit">Return</button> 
+    </form>
+</div>
+</body>
+</html>
