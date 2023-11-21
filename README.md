@@ -4,7 +4,7 @@ Group: 6
 Name: 
 Chau Man Chung (13202700)
 
-Application link: https://s381f-hardwareinventorysystem.onrender.com
+Application link: https://s381f-computerhardwareinventorysystem.onrender.com
 
 ********************************************
 # Login
